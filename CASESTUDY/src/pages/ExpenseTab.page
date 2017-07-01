@@ -1,0 +1,20 @@
+<apex:page controller="CaseStudyVFTabExpense">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageblockTable value="{!listExpense}" var="exp">
+                <apex:column >
+                    <apex:facet name="header">Amount</apex:facet>
+                    <apex:inputField value="{!exp.Amount__c}"/>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">Type</apex:facet>
+                    <apex:inputField value="{!exp.Type__c}"/>
+                </apex:column>
+            </apex:pageblockTable>
+            <apex:pageblockButtons >
+                <apex:commandButton action="{!addNewExpense }" value="Add Another"/>
+            </apex:pageblockButtons>
+        </apex:pageBlock>
+    
+    </apex:form>
+</apex:page>

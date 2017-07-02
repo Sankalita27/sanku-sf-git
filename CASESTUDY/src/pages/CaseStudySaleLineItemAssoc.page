@@ -1,0 +1,17 @@
+<apex:page standardController="Case_Study_Sale__c" extensions="CaseStudySaleLineItemController">
+    <apex:form >
+        <apex:detail relatedList="false"/>
+        <apex:pageBlock title="Line Items">
+            <c:MultiselectPicklist leftLabel="Available Line Items"
+                leftOption="{!allLineItems}"
+                rightLabel="Selected Line Items"
+                rightOption="{!selectedLineItems}"
+                size="14"
+                width="150px"/>
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!save}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+    <apex:outputText >{!message}</apex:outputText>
+</apex:page>

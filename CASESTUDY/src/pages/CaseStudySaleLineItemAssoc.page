@@ -1,6 +1,12 @@
 <apex:page standardController="Case_Study_Sale__c" extensions="CaseStudySaleLineItemController">
     <apex:form >
-        <apex:detail relatedList="false"/>
+        <apex:sectionHeader subtitle="Disco"/>
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:inputField value="{!caseStudy.name}"/>
+                <apex:inputField value="{!caseStudy.Description__c}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
         <apex:pageBlock title="Line Items">
             <c:MultiselectPicklist leftLabel="Available Line Items"
                 leftOption="{!allLineItems}"
